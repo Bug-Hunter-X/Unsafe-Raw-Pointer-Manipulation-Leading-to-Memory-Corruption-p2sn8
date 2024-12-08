@@ -1,0 +1,1 @@
+fn main() {    let mut vec = Vec::new();    vec.push(1);    vec.push(2);    let ptr = vec.as_mut_ptr();    unsafe {        // Incorrectly assuming the vector's capacity remains unchanged        *ptr = 3;    }    println!("The first element is: {}", vec[0]);}
