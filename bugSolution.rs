@@ -1,0 +1,1 @@
+fn main() {    let mut vec = Vec::new();    vec.push(1);    vec.push(2);    // Safe approach: modify using indexing    vec[0] = 3;    println!("The first element is: {}", vec[0]);    // Another safe approach using iter_mut    for val in vec.iter_mut() {        *val *= 2;    }    println!("The vector is: {:?}", vec);}
